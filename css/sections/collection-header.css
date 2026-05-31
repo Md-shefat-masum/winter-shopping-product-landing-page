@@ -1,0 +1,296 @@
+/* =========================================================
+   STEP 06 — Collection intro header
+   ========================================================= */
+.collection-head-section {
+  position: relative;
+  overflow: hidden;
+  padding: 30px clamp(20px, 3.4vw, 52px) 28px;
+  color: var(--text-primary);
+  border-bottom: 1px solid rgba(218, 229, 238, 0.14);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(63, 91, 109, 0.94),
+      rgba(53, 82, 99, 0.96)
+    );
+}
+
+.collection-head-section::before,
+.collection-head-section::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.collection-head-section::before {
+  right: -80px;
+  bottom: -150px;
+  width: 420px;
+  height: 420px;
+  border: 1px solid rgba(218, 229, 238, 0.08);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 52px rgba(218, 229, 238, 0.018),
+    0 0 0 104px rgba(218, 229, 238, 0.014);
+}
+
+.collection-head-section::after {
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(240, 247, 249, 0.32),
+      transparent
+    );
+}
+
+.collection-head-topline,
+.collection-head-bottomline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  color: rgba(218, 229, 238, 0.54);
+  font-family: var(--font-tech);
+  font-size: 0.44rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.collection-head-code {
+  color: rgba(240, 247, 249, 0.72);
+}
+
+.collection-head-main {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(360px, 1fr) auto;
+  align-items: end;
+  gap: clamp(26px, 4vw, 62px);
+  padding-block: 34px 32px;
+}
+
+.collection-head-title-wrap {
+  min-width: 0;
+}
+
+.collection-head-eyebrow {
+  margin-bottom: 10px;
+  color: rgba(218, 229, 238, 0.62);
+  font-family: var(--font-tech);
+  font-size: 0.48rem;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  line-height: 1.4;
+}
+
+.collection-head-title {
+  display: grid;
+  color: rgba(247, 250, 252, 0.95);
+  font-family: var(--font-display);
+  font-size: clamp(3.9rem, 8vw, 8.8rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 0.74;
+  text-transform: uppercase;
+}
+
+.collection-head-title span {
+  color: rgba(213, 230, 236, 0.18);
+  letter-spacing: -0.07em;
+  -webkit-text-stroke: 1px rgba(235, 243, 245, 0.7);
+}
+
+.collection-head-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  padding-bottom: 5px;
+}
+
+.collection-head-meta-block {
+  min-width: 0;
+}
+
+.collection-head-meta-block p:last-child {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 8px;
+  color: rgba(240, 247, 249, 0.8);
+  font-family: var(--font-tech);
+  font-size: 0.48rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  line-height: 1.55;
+}
+
+.collection-head-live-dot {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: rgba(239, 248, 250, 0.92);
+  box-shadow: 0 0 12px rgba(239, 248, 250, 0.72);
+  animation: collectionHeadPulse 2.2s ease-in-out infinite;
+}
+
+.collection-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 46px;
+  padding: 0 16px 0 18px;
+  border: 1px solid rgba(218, 229, 238, 0.3);
+  color: rgba(247, 250, 252, 0.86);
+  background: rgba(218, 229, 238, 0.035);
+  font-family: var(--font-tech);
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 10px) 0,
+    100% 10px,
+    100% 100%,
+    0 100%
+  );
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.collection-filter-btn:hover,
+.collection-filter-btn:focus-visible {
+  color: var(--deep-bg);
+  border-color: rgba(247, 250, 252, 0.84);
+  background: rgba(247, 250, 252, 0.9);
+  transform: translateY(-3px);
+}
+
+.collection-filter-btn svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 1.4;
+}
+
+.collection-head-bottomline span {
+  display: block;
+  flex: 1;
+  height: 1px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(218, 229, 238, 0.4),
+      rgba(218, 229, 238, 0.08)
+    );
+}
+
+@keyframes collectionHeadPulse {
+  0%,
+  100% {
+    opacity: 0.52;
+    transform: scale(0.84);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.18);
+  }
+}
+
+/* =========================================================
+   Collection header responsive behaviour
+   ========================================================= */
+@media (max-width: 1080px) {
+  .collection-head-main {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 24px 32px;
+  }
+
+  .collection-head-meta {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    max-width: 720px;
+    padding-bottom: 0;
+  }
+
+  .collection-filter-btn {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .collection-head-section {
+    padding: 22px 18px 20px;
+  }
+
+  .collection-head-topline,
+  .collection-head-bottomline {
+    font-size: 0.39rem;
+  }
+
+  .collection-head-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding-block: 26px 24px;
+  }
+
+  .collection-head-title {
+    font-size: clamp(4rem, 20vw, 6.2rem);
+  }
+
+  .collection-head-meta {
+    grid-column: auto;
+    grid-row: auto;
+    grid-template-columns: 1fr;
+    gap: 13px;
+    padding-top: 2px;
+  }
+
+  .collection-head-meta-block {
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid rgba(218, 229, 238, 0.1);
+  }
+
+  .collection-head-meta-block p:last-child {
+    margin-top: 0;
+    font-size: 0.45rem;
+  }
+
+  .collection-filter-btn {
+    grid-column: auto;
+    grid-row: auto;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .collection-head-bottomline p:last-child {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .collection-head-live-dot {
+    animation: none;
+  }
+}

@@ -1,0 +1,39 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="960" y1="0" x2="960" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7995A6"/>
+      <stop offset=".5" stop-color="#527489"/>
+      <stop offset="1" stop-color="#294D61"/>
+    </linearGradient>
+    <radialGradient id="light" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(960 260) rotate(90) scale(620 880)">
+      <stop stop-color="#DDE9ED" stop-opacity=".52"/>
+      <stop offset="1" stop-color="#DDE9ED" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="back" x1="900" y1="290" x2="940" y2="830" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DAE6EA" stop-opacity=".84"/>
+      <stop offset="1" stop-color="#6D8B9A" stop-opacity=".92"/>
+    </linearGradient>
+    <linearGradient id="front" x1="980" y1="550" x2="980" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B9CFD8"/>
+      <stop offset="1" stop-color="#3C6277"/>
+    </linearGradient>
+    <filter id="blur" x="-200" y="-200" width="2320" height="1480">
+      <feGaussianBlur stdDeviation="36"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <rect width="1920" height="1080" fill="url(#light)"/>
+
+  <path d="M-120 802 110 572l174 132 244-374 170 226 208-352 190 302 226-238 250 316 196-184 372 322v256H-120V802Z" fill="url(#back)" opacity=".82"/>
+  <path d="m528 330 170 226-138 202-276-54 244-374Z" fill="#EDF4F5" fill-opacity=".26"/>
+  <path d="m906 204 190 302-126 170-272-120 208-352Z" fill="#F4F8F8" fill-opacity=".32"/>
+  <path d="m1322 268 250 316-180 128-296-206 226-238Z" fill="#E5EFF1" fill-opacity=".24"/>
+
+  <path d="M-80 940 226 708l188 134 284-196 196 166 258-296 244 222 244-128 360 238v232H-80V940Z" fill="url(#front)" opacity=".92"/>
+  <path d="m1152 516 244 222-174 148-328-74 258-296Z" fill="#D9E6EA" fill-opacity=".28"/>
+  <path d="m698 646 196 166-136 172-344-142 284-196Z" fill="#D9E7EB" fill-opacity=".2"/>
+
+  <path d="M-80 794c338-88 612-28 930-62 346-36 626-44 1152 72v140H-80V794Z" fill="#E6EFF1" fill-opacity=".16" filter="url(#blur)"/>
+  <path d="M-80 920c382-62 670-36 1014-58 382-22 610-14 1078 76v142H-80V920Z" fill="#E4EEF0" fill-opacity=".18" filter="url(#blur)"/>
+</svg>

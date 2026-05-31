@@ -1,0 +1,101 @@
+<svg width="980" height="1180" viewBox="0 0 980 1180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shell" x1="248" y1="237" x2="710" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7FBFC"/>
+      <stop offset=".18" stop-color="#C9D9DE"/>
+      <stop offset=".34" stop-color="#8EA8B5"/>
+      <stop offset=".52" stop-color="#EEF5F6"/>
+      <stop offset=".74" stop-color="#A2BAC4"/>
+      <stop offset="1" stop-color="#627F8E"/>
+    </linearGradient>
+    <linearGradient id="shellDark" x1="384" y1="235" x2="610" y2="1030" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#91ABB6"/>
+      <stop offset=".28" stop-color="#587788"/>
+      <stop offset=".7" stop-color="#36596B"/>
+      <stop offset="1" stop-color="#203F50"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="390" y1="135" x2="594" y2="204" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DFEFF3"/>
+      <stop offset=".28" stop-color="#7DA4B4"/>
+      <stop offset=".58" stop-color="#365E73"/>
+      <stop offset="1" stop-color="#A8C5D0"/>
+    </linearGradient>
+    <linearGradient id="pants" x1="378" y1="890" x2="550" y2="1180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7795A3"/>
+      <stop offset=".4" stop-color="#486B7D"/>
+      <stop offset="1" stop-color="#233F4E"/>
+    </linearGradient>
+    <linearGradient id="glove" x1="160" y1="600" x2="800" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#BFD0D6"/>
+      <stop offset=".5" stop-color="#7895A2"/>
+      <stop offset="1" stop-color="#465F6D"/>
+    </linearGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="489" cy="1136" rx="224" ry="26" fill="#18394A" fill-opacity=".28"/>
+  <ellipse cx="489" cy="1105" rx="156" ry="21" fill="#D6E7EB" fill-opacity=".11" filter="url(#soft)"/>
+
+  <!-- hood + head -->
+  <path d="M392 164C398 70 575 68 588 164L570 290H409L392 164Z" fill="#DCE8EB"/>
+  <path d="M410 126C437 60 549 57 575 128L579 176H401L410 126Z" fill="#456B7D"/>
+  <path d="M401 174C436 144 548 142 580 176L562 217H417L401 174Z" fill="#BFD1D6"/>
+  <path d="M413 174H570L557 207H425L413 174Z" fill="url(#glass)"/>
+  <path d="M448 217H535L552 276H428L448 217Z" fill="#B6C9CF"/>
+  <path d="M462 222H521L530 260H450L462 222Z" fill="#7997A4"/>
+
+  <!-- jacket body -->
+  <path d="M354 292L425 245H554L626 292L712 466L638 536L606 470L644 902H335L371 470L339 536L264 466L354 292Z" fill="url(#shell)"/>
+  <path d="M426 246L462 330L439 902H335L371 470L339 536L264 466L354 292L426 246Z" fill="#EDF4F5" fill-opacity=".65"/>
+  <path d="M554 246L522 332L539 902H644L606 470L638 536L712 466L626 292L554 246Z" fill="url(#shellDark)" fill-opacity=".62"/>
+
+  <!-- jacket shoulder panels -->
+  <path d="M356 292L424 246L466 337L392 359L356 292Z" fill="#F7FBFC" fill-opacity=".52"/>
+  <path d="M554 246L625 292L589 359L516 337L554 246Z" fill="#5F7E8E" fill-opacity=".76"/>
+  <path d="M386 298L489 352L592 299" stroke="#6E8D9C" stroke-width="5"/>
+  <path d="M489 352V902" stroke="#6E8D9C" stroke-width="4"/>
+
+  <!-- horizontal puffer channels -->
+  <path d="M369 379H607" stroke="#F8FCFD" stroke-opacity=".72" stroke-width="7"/>
+  <path d="M360 466H617" stroke="#6C8C9A" stroke-opacity=".48" stroke-width="6"/>
+  <path d="M351 552H626" stroke="#F8FCFD" stroke-opacity=".62" stroke-width="6"/>
+  <path d="M345 640H634" stroke="#6A8998" stroke-opacity=".46" stroke-width="6"/>
+  <path d="M340 731H639" stroke="#F8FCFD" stroke-opacity=".54" stroke-width="6"/>
+  <path d="M337 818H642" stroke="#668796" stroke-opacity=".44" stroke-width="6"/>
+
+  <!-- reflective edge details -->
+  <path d="M383 326L357 807" stroke="#FBFEFF" stroke-opacity=".52" stroke-width="4"/>
+  <path d="M596 326L622 806" stroke="#D9E8EB" stroke-opacity=".38" stroke-width="4"/>
+  <path d="M490 365V874" stroke="#F5FAFB" stroke-opacity=".72" stroke-width="2"/>
+
+  <!-- zipper -->
+  <g fill="#294F62">
+    <circle cx="499" cy="428" r="5"/>
+    <circle cx="499" cy="480" r="5"/>
+    <circle cx="499" cy="532" r="5"/>
+    <circle cx="499" cy="584" r="5"/>
+    <circle cx="499" cy="636" r="5"/>
+    <circle cx="499" cy="688" r="5"/>
+  </g>
+
+  <!-- sleeves -->
+  <path d="M271 458L155 654L239 695L363 538L271 458Z" fill="url(#shell)"/>
+  <path d="M708 458L823 654L741 695L616 538L708 458Z" fill="url(#shell)"/>
+  <path d="M177 620L249 659" stroke="#F3F8FA" stroke-opacity=".58" stroke-width="6"/>
+  <path d="M801 620L731 659" stroke="#F3F8FA" stroke-opacity=".38" stroke-width="6"/>
+  <path d="M155 654L239 695L207 773L113 726L155 654Z" fill="url(#glove)"/>
+  <path d="M823 654L741 695L771 773L865 726L823 654Z" fill="url(#glove)"/>
+
+  <!-- pants -->
+  <path d="M352 900L379 1180H484L487 900H352Z" fill="url(#pants)"/>
+  <path d="M491 900L495 1180H601L628 900H491Z" fill="url(#pants)"/>
+  <path d="M338 900H643" stroke="#D7E6E9" stroke-opacity=".56" stroke-width="7"/>
+  <path d="M480 936L471 1178" stroke="#A8BFC7" stroke-opacity=".26" stroke-width="4"/>
+  <path d="M503 936L514 1178" stroke="#A8BFC7" stroke-opacity=".26" stroke-width="4"/>
+
+  <!-- chest technical badge -->
+  <rect x="543" y="407" width="48" height="27" rx="4" fill="#294F62" fill-opacity=".68"/>
+  <path d="M552 417H581M552 424H573" stroke="#DCE9EC" stroke-opacity=".78" stroke-width="2"/>
+</svg>

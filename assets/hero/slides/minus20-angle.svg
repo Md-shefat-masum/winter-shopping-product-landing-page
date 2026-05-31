@@ -1,0 +1,38 @@
+<svg width="760" height="900" viewBox="0 0 760 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="coat" x1="250" y1="225" x2="520" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8E7EC"/>
+      <stop offset=".45" stop-color="#7DA4B5"/>
+      <stop offset="1" stop-color="#365D72"/>
+    </linearGradient>
+    <linearGradient id="hood" x1="320" y1="90" x2="452" y2="254" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8E7EC"/>
+      <stop offset="1" stop-color="#7DA4B5"/>
+    </linearGradient>
+    <linearGradient id="pants" x1="316" y1="704" x2="468" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7DA4B5"/>
+      <stop offset="1" stop-color="#365D72"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(26 2) skewX(-5)">
+    <ellipse cx="385" cy="858" rx="175" ry="26" fill="#173847" fill-opacity=".26"/>
+    <path d="M320 160c12-86 118-88 132 0l-18 82H337l-17-82Z" fill="url(#hood)"/>
+    <path d="M338 141h96l21 48-139-1 22-47Z" fill="#294B5D"/>
+    <path d="M361 147h88l13 25H331l11-25Z" fill="#9CB6C3" fill-opacity=".88"/>
+    <path d="M263 248 331 198h99l72 50 88 126-67 79-42-58 21 367H264l17-365-43 61-73-76 98-134Z" fill="url(#coat)"/>
+    <path d="m283 730 9 170h93l4-170h-106Zm110 0-4 170h92l10-170h-98Z" fill="url(#pants)"/>
+    <path d="M289 727h205" stroke="#D9E8EB" stroke-opacity=".5" stroke-width="6"/>
+    <path d="M263 255 390 318l117-62" stroke="#7893A1" stroke-width="5"/>
+    <path d="M390 318v410" stroke="#7893A1" stroke-width="4"/>
+    <path d="M296 322h190" stroke="#F6FAFB" stroke-opacity=".58" stroke-width="5"/>
+<path d="M296 403h190" stroke="#F6FAFB" stroke-opacity=".58" stroke-width="5"/>
+<path d="M296 492h190" stroke="#F6FAFB" stroke-opacity=".58" stroke-width="5"/>
+<path d="M296 585h190" stroke="#F6FAFB" stroke-opacity=".58" stroke-width="5"/>
+<path d="M296 676h190" stroke="#F6FAFB" stroke-opacity=".58" stroke-width="5"/>
+    <path d="m238 380-91 152 75 34 101-135-85-51Zm357-3 87 156-76 33-98-136 87-53Z" fill="url(#coat)"/>
+    <path d="m147 532 75 34-22 72-84-35 31-71Zm535 1-76 33 22 72 84-35-30-70Z" fill="#7DA4B5"/>
+    <circle cx="401" cy="446" r="4" fill="#365D72"/>
+    <circle cx="401" cy="489" r="4" fill="#365D72"/>
+    <circle cx="401" cy="532" r="4" fill="#365D72"/>
+  </g>
+</svg>

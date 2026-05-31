@@ -1,0 +1,655 @@
+/* =========================================================
+   STEP 08 V2 — Summit Editorial Story
+   Isolated summit-story-* classes prevent collisions with
+   previous experimental editorial styles.
+   ========================================================= */
+
+.summit-story-section {
+  --summit-progress: 0;
+  --summit-pointer-x: 0;
+  --summit-pointer-y: 0;
+  position: relative;
+  min-height: clamp(740px, 69vw, 940px);
+  overflow: hidden;
+  isolation: isolate;
+  color: var(--text-primary);
+  border-bottom: 1px solid rgba(218, 229, 238, 0.16);
+  background:
+    radial-gradient(
+      circle at 50% 16%,
+      rgba(202, 222, 231, 0.36),
+      rgba(120, 154, 171, 0.14) 34%,
+      transparent 60%
+    ),
+    linear-gradient(
+      180deg,
+      #68889b 0%,
+      #527489 27%,
+      #355d72 62%,
+      #183d51 100%
+    );
+}
+
+.summit-story-section::before,
+.summit-story-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.summit-story-section::before {
+  z-index: 2;
+  opacity: 0.22;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(236, 245, 247, 0.06) 0,
+      rgba(236, 245, 247, 0.06) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+  mix-blend-mode: screen;
+}
+
+.summit-story-section::after {
+  z-index: 11;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(12, 35, 48, 0.04) 0%,
+      transparent 22%,
+      transparent 70%,
+      rgba(8, 25, 35, 0.6) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(7, 26, 36, 0.2),
+      transparent 26%,
+      transparent 74%,
+      rgba(7, 26, 36, 0.18)
+    );
+}
+
+.summit-story-sky-glow {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  z-index: 0;
+  width: min(860px, 72vw);
+  height: 44%;
+  border-radius: 50%;
+  opacity: 0.72;
+  background:
+    radial-gradient(
+      circle,
+      rgba(229, 240, 244, 0.24),
+      rgba(206, 224, 231, 0.06) 50%,
+      transparent 72%
+    );
+  filter: blur(24px);
+  transform:
+    translateX(-50%)
+    translateY(calc(var(--summit-pointer-y) * -8px));
+  pointer-events: none;
+}
+
+.summit-story-brand-mark {
+  position: absolute;
+  top: -4%;
+  left: 50%;
+  z-index: 1;
+  width: min(1120px, 90vw);
+  max-width: none;
+  opacity: calc(0.34 - (var(--summit-progress) * 0.25));
+  filter:
+    blur(calc(1.2px + (var(--summit-progress) * 2.6px)))
+    saturate(0.78);
+  mix-blend-mode: screen;
+  transform:
+    translateX(-50%)
+    translateY(calc((var(--summit-progress) * -92px) + (var(--summit-pointer-y) * -6px)))
+    scale(calc(1 + (var(--summit-progress) * 0.035)));
+  pointer-events: none;
+  will-change: transform, opacity, filter;
+}
+
+.summit-story-note {
+  position: absolute;
+  z-index: 13;
+  max-width: 194px;
+  color: rgba(238, 246, 248, 0.74);
+  font-family: var(--font-tech);
+  font-size: 0.44rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.62;
+  text-transform: uppercase;
+}
+
+.summit-story-note span {
+  display: inline-block;
+  margin-top: 13px;
+  color: rgba(238, 246, 248, 0.42);
+}
+
+.summit-story-note-left {
+  top: 70px;
+  left: clamp(22px, 3.6vw, 58px);
+}
+
+.summit-story-note-right {
+  top: 36%;
+  right: clamp(22px, 3.6vw, 58px);
+  text-align: right;
+}
+
+.summit-story-mountain-stage {
+  position: absolute;
+  right: -4%;
+  bottom: -2%;
+  left: -4%;
+  z-index: 4;
+  height: 76%;
+  pointer-events: none;
+}
+
+.summit-story-mountain-stage::before {
+  content: "";
+  position: absolute;
+  right: 6%;
+  bottom: 0;
+  left: 6%;
+  height: 36%;
+  border-radius: 50%;
+  opacity: 0.72;
+  background:
+    radial-gradient(
+      circle,
+      rgba(226, 238, 242, 0.2),
+      rgba(226, 238, 242, 0.05) 52%,
+      transparent 74%
+    );
+  filter: blur(24px);
+}
+
+.summit-story-mountain {
+  position: absolute;
+  bottom: -3%;
+  left: 50%;
+  width: min(1610px, 116vw);
+  max-width: none;
+  transform-origin: center bottom;
+  transform:
+    translateX(-50%)
+    translateY(calc((var(--summit-progress) * -76px) + (var(--summit-pointer-y) * -5px)))
+    scale(calc(1 + (var(--summit-progress) * 0.17)));
+  filter:
+    saturate(0.68)
+    contrast(1.03)
+    brightness(0.94)
+    drop-shadow(0 30px 34px rgba(7, 23, 32, 0.32));
+  will-change: transform;
+}
+
+.summit-story-ground-fade {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 8;
+  height: 38%;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(15, 42, 56, 0) 0%,
+      rgba(15, 42, 56, 0.22) 44%,
+      rgba(9, 27, 38, 0.94) 100%
+    );
+}
+
+.summit-story-copy {
+  position: absolute;
+  bottom: 88px;
+  left: clamp(22px, 3.6vw, 58px);
+  z-index: 14;
+  max-width: min(680px, 58vw);
+  isolation: isolate;
+  transform:
+    translateY(calc(var(--summit-progress) * -14px))
+    translateX(calc(var(--summit-pointer-x) * -3px));
+  will-change: transform;
+}
+
+/*
+  Readability layer:
+  The title crosses bright snow areas, so a soft alpine-blue fade is placed
+  behind the copy rather than using a visible rectangular panel.
+*/
+.summit-story-copy::before {
+  content: "";
+  position: absolute;
+  top: -34px;
+  right: -118px;
+  bottom: -30px;
+  left: -28px;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.94;
+  background:
+    radial-gradient(
+      ellipse at 22% 48%,
+      rgba(6, 28, 40, 0.82) 0%,
+      rgba(10, 38, 52, 0.68) 45%,
+      rgba(15, 48, 63, 0.34) 68%,
+      transparent 88%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(7, 27, 39, 0.76) 0%,
+      rgba(11, 41, 55, 0.5) 62%,
+      transparent 100%
+    );
+  filter: blur(13px);
+}
+
+.summit-story-title {
+  display: grid;
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 7.15vw, 7.55rem);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 0.88;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.summit-story-title span {
+  color: rgba(244, 249, 250, 0.96);
+  text-shadow:
+    0 2px 0 rgba(7, 27, 39, 0.66),
+    0 8px 22px rgba(3, 17, 25, 0.52);
+}
+
+/* Alternating icy tones stop the three lines from merging visually. */
+.summit-story-title span:nth-child(2) {
+  color: rgba(197, 220, 228, 0.9);
+  -webkit-text-stroke: 1px rgba(236, 245, 247, 0.5);
+  text-shadow:
+    0 2px 0 rgba(7, 27, 39, 0.7),
+    0 8px 22px rgba(3, 17, 25, 0.58);
+}
+
+.summit-story-title span:nth-child(3) {
+  color: rgba(226, 239, 243, 0.96);
+}
+
+.summit-story-link,
+.summit-story-product-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(239, 247, 249, 0.9);
+  font-family: var(--font-tech);
+  font-size: 0.44rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  transition:
+    gap var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.summit-story-link {
+  margin-top: 20px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid rgba(236, 245, 247, 0.5);
+}
+
+.summit-story-link:hover,
+.summit-story-link:focus-visible,
+.summit-story-product-link:hover,
+.summit-story-product-link:focus-visible {
+  gap: 16px;
+  color: #fff;
+}
+
+.summit-story-link svg,
+.summit-story-product-link svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.4;
+}
+
+.summit-story-product {
+  position: absolute;
+  right: clamp(22px, 3.8vw, 62px);
+  bottom: 74px;
+  z-index: 15;
+  display: grid;
+  grid-template-columns: 184px minmax(236px, 314px);
+  align-items: end;
+  gap: 0;
+  width: min(500px, 43vw);
+  transform:
+    translateY(calc(var(--summit-progress) * -22px))
+    translateX(calc(var(--summit-pointer-x) * 4px));
+  will-change: transform;
+}
+
+.summit-story-product-figure {
+  position: relative;
+  z-index: 2;
+  height: 330px;
+  margin-right: -22px;
+  overflow: hidden;
+}
+
+.summit-story-product-figure::after {
+  content: "";
+  position: absolute;
+  right: 13%;
+  bottom: 2px;
+  left: 13%;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(5, 18, 25, 0.38);
+  filter: blur(10px);
+}
+
+.summit-story-product-image {
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 120%;
+  object-fit: contain;
+  object-position: center bottom;
+  filter:
+    saturate(0.78)
+    contrast(1.02)
+    brightness(0.94)
+    drop-shadow(0 18px 18px rgba(5, 19, 27, 0.4));
+  transform:
+    translateY(calc(var(--summit-progress) * -18px))
+    scale(calc(1 + (var(--summit-progress) * 0.055)));
+  transform-origin: center bottom;
+}
+
+.summit-story-product-card {
+  position: relative;
+  z-index: 3;
+  padding: 18px 18px 16px;
+  border: 1px solid rgba(232, 242, 245, 0.16);
+  color: rgba(242, 247, 248, 0.86);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(26, 59, 76, 0.9),
+      rgba(14, 37, 50, 0.94)
+    );
+  backdrop-filter: blur(12px);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 18px) 0,
+    100% 18px,
+    100% 100%,
+    0 100%
+  );
+  box-shadow: 0 18px 38px rgba(5, 19, 27, 0.26);
+}
+
+.summit-story-product-card h3 {
+  margin-top: 6px;
+  color: rgba(248, 251, 252, 0.98);
+  font-family: var(--font-display);
+  font-size: 2.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+.summit-story-product-card sup {
+  margin-left: 2px;
+  font-family: var(--font-tech);
+  font-size: 0.44rem;
+  vertical-align: top;
+}
+
+.summit-story-product-description {
+  margin-top: 9px;
+  color: rgba(222, 235, 240, 0.72);
+  font-size: 0.76rem;
+  line-height: 1.58;
+}
+
+.summit-story-product-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 15px;
+  padding-top: 13px;
+  border-top: 1px solid rgba(232, 242, 245, 0.14);
+}
+
+.summit-story-product-meta strong {
+  color: rgba(248, 251, 252, 0.98);
+  font-family: var(--font-tech);
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.summit-story-bottomline {
+  position: absolute;
+  right: clamp(22px, 3.6vw, 58px);
+  bottom: 22px;
+  left: clamp(22px, 3.6vw, 58px);
+  z-index: 16;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 11px;
+  border-top: 1px solid rgba(229, 240, 243, 0.16);
+  color: rgba(229, 240, 243, 0.64);
+  font-family: var(--font-tech);
+  font-size: 0.4rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.summit-story-barcode {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.summit-story-barcode img {
+  width: 112px;
+  height: 22px;
+  opacity: 0.72;
+}
+
+/* Tablet */
+@media (max-width: 1080px) {
+  .summit-story-section {
+    min-height: 900px;
+  }
+
+  .summit-story-title {
+    font-size: clamp(4rem, 9vw, 6.8rem);
+  }
+
+  .summit-story-copy {
+    bottom: 296px;
+    max-width: 620px;
+  }
+
+  .summit-story-product {
+    right: clamp(22px, 3.6vw, 58px);
+    bottom: 72px;
+    width: min(520px, calc(100% - 44px));
+  }
+
+  .summit-story-note-right {
+    top: 80px;
+  }
+
+  .summit-story-mountain {
+    width: min(1500px, 148vw);
+  }
+}
+
+/* Mobile */
+@media (max-width: 680px) {
+  .summit-story-section {
+    min-height: 900px;
+  }
+
+  .summit-story-brand-mark {
+    top: 7%;
+    width: 140vw;
+  }
+
+  .summit-story-note-left {
+    top: 22px;
+    left: 18px;
+    max-width: 160px;
+    font-size: 0.37rem;
+  }
+
+  .summit-story-note-right {
+    top: 26px;
+    right: 18px;
+    max-width: 112px;
+    font-size: 0.37rem;
+  }
+
+  .summit-story-mountain-stage {
+    bottom: 12%;
+    height: 57%;
+  }
+
+  .summit-story-mountain {
+    width: min(1020px, 185vw);
+  }
+
+  .summit-story-copy {
+    right: 18px;
+    bottom: 318px;
+    left: 18px;
+    max-width: none;
+  }
+
+  .summit-story-title {
+    font-size: clamp(3.1rem, 14.2vw, 5rem);
+    line-height: 0.92;
+  }
+
+  .summit-story-copy::before {
+    top: -24px;
+    right: -30px;
+    bottom: -24px;
+    left: -18px;
+    opacity: 0.9;
+  }
+
+  .summit-story-product {
+    right: 18px;
+    bottom: 72px;
+    left: 18px;
+    display: block;
+    width: auto;
+  }
+
+  .summit-story-product-figure {
+    width: 154px;
+    height: 220px;
+    margin: 0 0 -48px auto;
+  }
+
+  .summit-story-product-card {
+    padding: 16px;
+  }
+
+  .summit-story-product-card h3 {
+    font-size: 2rem;
+  }
+
+  .summit-story-product-description {
+    font-size: 0.7rem;
+  }
+
+  .summit-story-bottomline {
+    right: 18px;
+    bottom: 16px;
+    left: 18px;
+    gap: 10px;
+    font-size: 0.34rem;
+  }
+
+  .summit-story-bottomline > p {
+    max-width: 136px;
+  }
+
+  .summit-story-barcode {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+  }
+
+  .summit-story-barcode img {
+    width: 90px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 460px) {
+  .summit-story-note-right {
+    display: none;
+  }
+
+  .summit-story-copy {
+    bottom: 324px;
+  }
+
+  .summit-story-title {
+    font-size: clamp(2.72rem, 14vw, 4rem);
+  }
+
+  .summit-story-link,
+  .summit-story-product-link {
+    font-size: 0.36rem;
+  }
+
+  .summit-story-product-meta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .summit-story-brand-mark,
+  .summit-story-sky-glow,
+  .summit-story-mountain,
+  .summit-story-copy,
+  .summit-story-product,
+  .summit-story-product-image {
+    transform: none !important;
+    filter: none;
+  }
+}

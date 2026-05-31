@@ -1,0 +1,22 @@
+.clip-corner {
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--clip-corner-size)) 0,
+    100% var(--clip-corner-size),
+    100% 100%,
+    0 100%
+  );
+}
+
+.clip-octagon {
+  clip-path: polygon(
+    28% 0,
+    72% 0,
+    100% 28%,
+    100% 72%,
+    72% 100%,
+    28% 100%,
+    0 72%,
+    0 28%
+  );
+}

@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FRZN — Winter Collection</title>
+    <meta name="description" content="FRZN premium winter banner slider" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="page-backdrop" aria-hidden="true"></div>
+
+    <main class="site-shell">
+      <header class="navbar-section" id="top">
+        <div class="navbar-main">
+          <a class="navbar-brand" href="#top" aria-label="FRZN home">
+            <span class="navbar-brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 42 42" role="img">
+                <path d="M21 2 37.45 11.5v19L21 40 4.55 30.5v-19L21 2Z" />
+                <path d="m21 8 11.25 6.5v13L21 34 9.75 27.5v-13L21 8Z" />
+                <path d="M13.5 18.25 21 14l7.5 4.25v8.5L21 31l-7.5-4.25v-8.5Z" />
+              </svg>
+            </span>
+            <span class="navbar-brand-copy">
+              <strong>FRZN</strong>
+              <small>ARCTIC DIVISION</small>
+            </span>
+            <span class="navbar-brand-index">01</span>
+          </a>
+
+          <nav class="navbar-links" aria-label="Primary navigation">
+            <a href="#collection">Collection</a>
+            <a href="#grid">Winter Wear</a>
+            <a href="#grid">Outerwear</a>
+            <a href="#editorial">Journal</a>
+          </nav>
+
+          <div class="navbar-actions">
+            <button class="navbar-icon-btn" type="button" aria-label="Search">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="10.7" cy="10.7" r="5.45" />
+                <path d="m15 15 4.2 4.2" />
+              </svg>
+            </button>
+            <button class="navbar-icon-btn navbar-bag-btn" type="button" data-order-scroll aria-label="Shopping bag">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.2 8.3h11.6l.8 11H5.4l.8-11Z" />
+                <path d="M9.1 8.3V6.7a2.9 2.9 0 0 1 5.8 0v1.6" />
+              </svg>
+              <span class="navbar-bag-count">0</span>
+            </button>
+            <button class="navbar-menu-btn" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-navigation">
+              <span></span><span></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="navbar-mobile-panel" id="mobile-navigation">
+          <nav class="navbar-mobile-links" aria-label="Mobile navigation">
+            <a href="#collection"><span>01</span>Collection</a>
+            <a href="#grid"><span>02</span>Winter Wear</a>
+            <a href="#grid"><span>03</span>Outerwear</a>
+            <a href="#editorial"><span>04</span>Journal</a>
+          </nav>
+          <p class="navbar-mobile-meta">FRZN / ALPINE SYSTEM / 2026</p>
+        </div>
+      </header>
+
+      <section class="hero-section" id="hero" aria-label="Winter campaign products">
+        <div class="hero-parallax-stage" aria-hidden="true">
+          <img class="hero-bg-image" src="./assets/hero/backgrounds/hero-base-bg.png" alt="" />
+          <img class="hero-mountain-back" src="./assets/hero/backgrounds/everest-back-layer.png" alt="" />
+          <img class="hero-mountain-front" src="./assets/hero/backgrounds/everest-front-layer.png" alt="" />
+          <img class="hero-brand-mark" src="./assets/graphics/frzn-graffiti.png" alt="" />
+          <div class="hero-grid-layer"></div>
+          <div class="hero-fog-layer"></div>
+          <div class="hero-vignette-layer"></div>
+          <div class="hero-snow-layer" data-hero-snow></div>
+        </div>
+
+        <div class="hero-layout">
+          <div class="hero-main-swiper swiper" data-hero-main-swiper>
+            <div class="swiper-wrapper" data-hero-main-wrapper></div>
+          </div>
+
+          <aside class="hero-preview-zone" aria-label="Winter collection previews">
+            <div class="hero-preview-head">
+              <p class="tech-label">SELECT / SERIES</p>
+              <p class="hero-preview-code">FRZN-W26</p>
+            </div>
+
+            <div class="hero-thumb-swiper swiper" data-hero-thumb-swiper>
+              <div class="swiper-wrapper" data-hero-thumb-wrapper></div>
+            </div>
+
+            <div class="hero-preview-footer">
+              <div class="hero-nav-row">
+                <button class="hero-nav-btn hero-nav-prev" type="button" aria-label="Previous product">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 12H6" /><path d="m11 7-5 5 5 5" /></svg>
+                </button>
+                <div class="hero-pagination" aria-label="Product slide pagination"></div>
+                <button class="hero-nav-btn hero-nav-next" type="button" aria-label="Next product">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h12" /><path d="m13 7 5 5-5 5" /></svg>
+                </button>
+              </div>
+
+              <div class="hero-socials" aria-label="Social media links">
+                <a href="#" aria-label="Instagram">IG</a>
+                <a href="#" aria-label="Facebook">FB</a>
+                <a href="#" aria-label="X">X</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ========================================
+           SECTION 03: COLLECTION HEADER
+      ========================================= -->
+      <section
+        class="collection-head-section"
+        id="collection"
+        aria-labelledby="collection-title"
+      >
+        <div class="collection-head-topline">
+          <p class="tech-label">DROP / WINTER 26</p>
+          <p class="collection-head-code">FRZN — SERIES 001</p>
+        </div>
+
+        <div class="collection-head-main">
+          <div class="collection-head-title-wrap">
+            <p class="collection-head-eyebrow">CURATED / 08 ITEMS</p>
+
+            <h2 class="collection-head-title" id="collection-title">
+              NEW
+              <span>COLLECTION</span>
+            </h2>
+          </div>
+
+          <div class="collection-head-meta">
+            <div class="collection-head-meta-block">
+              <p class="tech-label">CATEGORY</p>
+              <p>THERMAL OUTERWEAR</p>
+            </div>
+
+            <div class="collection-head-meta-block">
+              <p class="tech-label">ENVIRONMENT</p>
+              <p>URBAN / ALPINE</p>
+            </div>
+
+            <div class="collection-head-meta-block">
+              <p class="tech-label">DROP STATUS</p>
+              <p><span class="collection-head-live-dot"></span>AVAILABLE NOW</p>
+            </div>
+          </div>
+
+          <button class="collection-filter-btn" type="button" aria-label="Open collection filters">
+            <span>FILTERS</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 7h16" />
+              <path d="M7 12h10" />
+              <path d="M10 17h4" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="collection-head-bottomline">
+          <p>01 / SELECTED PIECES</p>
+          <span></span>
+          <p>ENGINEERED FOR COLD</p>
+        </div>
+      </section>
+
+      <!-- ========================================
+           SECTION 04: PRODUCT GRID
+      ========================================= -->
+      <section
+        class="collection-grid-section"
+        id="grid"
+        aria-labelledby="grid-title"
+      >
+        <h2 class="sr-only" id="grid-title">Winter collection product grid</h2>
+
+        <div class="collection-grid-toolbar">
+          <p class="collection-grid-toolbar-label">08 ITEMS / CURATED DROP</p>
+
+          <div class="collection-grid-toolbar-links" aria-label="Collection categories">
+            <button class="is-active" type="button">ALL</button>
+            <button type="button">PUFFERS</button>
+            <button type="button">SHELLS</button>
+            <button type="button">ACCESSORIES</button>
+          </div>
+
+          <p class="collection-grid-toolbar-code">GRID / 001</p>
+        </div>
+
+        <div class="collection-grid-layout">
+          <article class="featured-product-card">
+            <div class="featured-product-visual">
+              <img
+                class="featured-product-real-photo"
+                src="./assets/featured/featured-summit900-black-olive.webp"
+                alt="The North Face Summit Series 900 black and olive winter jacket editorial preview"
+              />
+
+              <span class="featured-product-tag">FEATURED / 01</span>
+
+              <div class="featured-product-watermark" aria-hidden="true">
+                <span>FRZN</span>
+                <span>FRZN</span>
+              </div>
+            </div>
+
+            <div class="featured-product-content">
+              <div>
+                <p class="product-card-kicker">SIGNATURE OUTERWEAR</p>
+                <h3>SUMMIT 900<sup>™</sup></h3>
+              </div>
+
+              <a class="featured-product-link" href="#" aria-label="Explore Summit 900 winter jacket">
+                <span>EXPLORE</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h13" />
+                  <path d="m13 7 5 5-5 5" />
+                </svg>
+              </a>
+
+              <div class="featured-product-bottom">
+                <p>WATERPROOF DOWN EDITION</p>
+                <strong>$ 460.00</strong>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-card-image-wrap" href="#" aria-label="View Orbit jacket">
+              <span class="product-card-index">02</span>
+              <button class="product-card-wishlist" type="button" aria-label="Add Orbit jacket to wishlist">+</button>
+              <img class="product-card-real-photo" src="./assets/products/real/product-02-orbit-white-beige.webp" alt="Nike premium contrast padded winter jacket in white and beige" />
+            </a>
+            <div class="product-card-content">
+              <div>
+                <p class="product-card-kicker">REFLECTIVE PUFFER</p>
+                <h3>ORBIT<sup>™</sup></h3>
+              </div>
+              <div class="product-card-meta">
+                <span class="product-card-colour product-card-colour-silver" aria-hidden="true"></span>
+                <strong>$ 420.00</strong>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-card-image-wrap" href="#" aria-label="View Stealth jacket">
+              <span class="product-card-index">03</span>
+              <button class="product-card-wishlist" type="button" aria-label="Add Stealth jacket to wishlist">+</button>
+              <img class="product-card-real-photo" src="./assets/products/real/product-03-stealth-black.webp" alt="Nike premium contrast padded winter jacket in black" />
+            </a>
+            <div class="product-card-content">
+              <div>
+                <p class="product-card-kicker">SHIELD PUFFER</p>
+                <h3>STEALTH<sup>™</sup></h3>
+              </div>
+              <div class="product-card-meta">
+                <span class="product-card-colour product-card-colour-black" aria-hidden="true"></span>
+                <strong>$ 440.00</strong>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-card-image-wrap" href="#" aria-label="View Glacier jacket">
+              <span class="product-card-index">04</span>
+              <button class="product-card-wishlist" type="button" aria-label="Add Glacier jacket to wishlist">+</button>
+              <img class="product-card-real-photo" src="./assets/products/real/product-04-glacier-white-black.webp" alt="The North Face Summit Series 900 winter jacket in white and black" />
+            </a>
+            <div class="product-card-content">
+              <div>
+                <p class="product-card-kicker">INSULATED SHELL</p>
+                <h3>GLACIER<sup>™</sup></h3>
+              </div>
+              <div class="product-card-meta">
+                <span class="product-card-colour product-card-colour-frost" aria-hidden="true"></span>
+                <strong>$ 390.00</strong>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-card-image-wrap" href="#" aria-label="View Polar jacket">
+              <span class="product-card-index">05</span>
+              <button class="product-card-wishlist" type="button" aria-label="Add Polar jacket to wishlist">+</button>
+              <img class="product-card-real-photo" src="./assets/products/real/product-05-polar-sky-petrol.webp" alt="Nike premium contrast padded winter jacket in sky and petrol" />
+            </a>
+            <div class="product-card-content">
+              <div>
+                <p class="product-card-kicker">GLOSS PUFFER</p>
+                <h3>POLAR<sup>™</sup></h3>
+              </div>
+              <div class="product-card-meta">
+                <span class="product-card-colour product-card-colour-blue" aria-hidden="true"></span>
+                <strong>$ 415.00</strong>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-card-image-wrap" href="#" aria-label="View Nova jacket">
+              <span class="product-card-index">06</span>
+              <button class="product-card-wishlist" type="button" aria-label="Add Nova jacket to wishlist">+</button>
+              <img class="product-card-real-photo" src="./assets/products/real/product-06-nova-navy.webp" alt="CK premium high-neck padded winter jacket in navy blue" />
+            </a>
+            <div class="product-card-content">
+              <div>
+                <p class="product-card-kicker">TECH SNOW JACKET</p>
+                <h3>NOVA<sup>™</sup></h3>
+              </div>
+              <div class="product-card-meta">
+                <span class="product-card-colour product-card-colour-navy" aria-hidden="true"></span>
+                <strong>$ 405.00</strong>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-card-image-wrap" href="#" aria-label="View Icefield jacket">
+              <span class="product-card-index">07</span>
+              <button class="product-card-wishlist" type="button" aria-label="Add Icefield jacket to wishlist">+</button>
+              <img class="product-card-real-photo" src="./assets/products/real/product-07-icefield-ash-olive.webp" alt="Pull and Bear contrast padded winter jacket in ash and olive" />
+            </a>
+            <div class="product-card-content">
+              <div>
+                <p class="product-card-kicker">EXPEDITION SHELL</p>
+                <h3>ICEF<span>IELD</span><sup>™</sup></h3>
+              </div>
+              <div class="product-card-meta">
+                <span class="product-card-colour product-card-colour-cyan" aria-hidden="true"></span>
+                <strong>$ 470.00</strong>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <a class="product-card-image-wrap" href="#" aria-label="View Summit jacket">
+              <span class="product-card-index">08</span>
+              <button class="product-card-wishlist" type="button" aria-label="Add Summit jacket to wishlist">+</button>
+              <img class="product-card-real-photo" src="./assets/products/real/product-08-summit-navy-mint.webp" alt="The North Face Summit Series 900 winter jacket in navy and mint" />
+            </a>
+            <div class="product-card-content">
+              <div>
+                <p class="product-card-kicker">ALPINE SHELL</p>
+                <h3>SUMMIT<sup>™</sup></h3>
+              </div>
+              <div class="product-card-meta">
+                <span class="product-card-colour product-card-colour-white" aria-hidden="true"></span>
+                <strong>$ 445.00</strong>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="collection-grid-footer">
+          <p>DROP 001 / WINTER 26</p>
+          <span></span>
+          <a href="#">
+            <span>VIEW COMPLETE CATALOG</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h13" />
+              <path d="m13 7 5 5-5 5" />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- ========================================
+           SECTION 05: SUMMIT EDITORIAL STORY
+      ========================================= -->
+      <section
+        class="summit-story-section"
+        id="editorial"
+        data-summit-story
+        aria-labelledby="summit-story-title"
+      >
+        <div class="summit-story-sky-glow" aria-hidden="true"></div>
+
+        <img
+          class="summit-story-brand-mark"
+          src="./assets/graphics/frzn-graffiti.png"
+          alt=""
+          aria-hidden="true"
+        />
+
+        <div class="summit-story-note summit-story-note-left">
+          <p>FRZN WAS BORN IN THE MOUNTAINS. NOT AS A TREND, BUT AS A RESPONSE.</p>
+          <span>[ PROTOCOL_ALTITUDE_001 ]</span>
+        </div>
+
+        <div class="summit-story-note summit-story-note-right">
+          <p>FOR THOSE WHO CLIMB.</p>
+          <p>NOT FOR THE CROWD.</p>
+          <span>///</span>
+        </div>
+
+        <div class="summit-story-mountain-stage" aria-hidden="true">
+          <img
+            class="summit-story-mountain"
+            src="./assets/backgrounds/editorial-everest-clean.png"
+            alt=""
+          />
+        </div>
+
+        <div class="summit-story-ground-fade" aria-hidden="true"></div>
+
+        <div class="summit-story-copy">
+          <h2 class="summit-story-title" id="summit-story-title">
+            <span>BUILT FOR COLD</span>
+            <span>MADE FOR HEIGHT</span>
+            <span>FORGED TO LAST</span>
+          </h2>
+
+          <a class="summit-story-link" href="#">
+            <span>READ THE FIELD JOURNAL</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h13" />
+              <path d="m13 7 5 5-5 5" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="summit-story-product">
+          <div class="summit-story-product-figure" aria-hidden="true">
+            <img
+              class="summit-story-product-image"
+              src="./assets/products/glacier-model-clean.png"
+              alt=""
+            />
+          </div>
+
+          <article class="summit-story-product-card" aria-label="Featured Glacier jacket">
+            <p class="tech-label">FEATURED / ALTITUDE EDIT</p>
+            <h3>GLACIER<sup>™</sup></h3>
+
+            <p class="summit-story-product-description">
+              Reflective thermal puffer styled for summit wind, cold streets
+              and elevated terrain.
+            </p>
+
+            <div class="summit-story-product-meta">
+              <strong>$ 879.99</strong>
+
+              <a class="summit-story-product-link" href="#">
+                <span>SHOP THE LOOK</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h13" />
+                  <path d="m13 7 5 5-5 5" />
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="summit-story-bottomline">
+          <p>©2026 FRZN WEAR / ALL RIGHTS RESERVED</p>
+
+          <div class="summit-story-barcode">
+            <span>00125 / FRZN WEAR</span>
+            <img
+              src="./assets/graphics/editorial-barcode.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================
+           SECTION 06: ORDER CHECKOUT
+      ========================================= -->
+      <section class="order-section" id="order-form" aria-labelledby="order-title">
+        <div class="order-section-atmosphere" aria-hidden="true">
+          <span class="order-section-orbit order-section-orbit-one"></span>
+          <span class="order-section-orbit order-section-orbit-two"></span>
+          <span class="order-section-grid"></span>
+        </div>
+
+        <div class="order-section-inner">
+          <header class="order-section-header">
+            <div>
+              <p class="order-section-kicker">COLD DROP / CHECKOUT PROTOCOL</p>
+
+              <h2 class="order-section-title" id="order-title">
+                SECURE YOUR
+                <span>FIELD GEAR.</span>
+              </h2>
+            </div>
+
+            <div class="order-section-header-meta">
+              <p><span></span>COD AVAILABLE</p>
+              <p>CONFIRMATION / WITHIN 2 HOURS</p>
+            </div>
+          </header>
+
+          <form class="order-layout" data-order-form novalidate>
+            <section class="order-panel order-customer-panel" aria-labelledby="customer-information-title">
+              <div class="order-panel-heading">
+                <div>
+                  <p class="order-panel-index">01 / CUSTOMER DATA</p>
+                  <h3 id="customer-information-title">CUSTOMER INFORMATION</h3>
+                </div>
+
+                <span class="order-panel-status">REQUIRED</span>
+              </div>
+
+              <div class="order-field-grid">
+                <label class="order-field order-field-full">
+                  <span>FULL NAME <b>*</b></span>
+                  <input
+                    type="text"
+                    name="full_name"
+                    autocomplete="name"
+                    placeholder="ENTER YOUR FULL NAME"
+                    required
+                  />
+                </label>
+
+                <label class="order-field order-field-full">
+                  <span>MOBILE NUMBER <b>*</b></span>
+
+                  <span class="order-phone-wrap">
+                    <i>🇧🇩 +880</i>
+                    <input
+                      type="tel"
+                      name="phone"
+                      inputmode="numeric"
+                      autocomplete="tel"
+                      maxlength="11"
+                      pattern="01[0-9]{9}"
+                      placeholder="01XXXXXXXXX"
+                      required
+                    />
+                  </span>
+                </label>
+
+                <label class="order-field order-field-full">
+                  <span>DISTRICT <b>*</b></span>
+                  <select name="district" data-order-district required>
+                    <option value="">— SELECT DISTRICT —</option>
+                  <option value="Bagerhat">Bagerhat / বাগেরহাট</option>
+                  <option value="Bandarban">Bandarban / বান্দরবান</option>
+                  <option value="Barguna">Barguna / বরগুনা</option>
+                  <option value="Barishal">Barishal / বরিশাল</option>
+                  <option value="Bhola">Bhola / ভোলা</option>
+                  <option value="Bogura">Bogura / বগুড়া</option>
+                  <option value="Brahmanbaria">Brahmanbaria / ব্রাহ্মণবাড়িয়া</option>
+                  <option value="Chandpur">Chandpur / চাঁদপুর</option>
+                  <option value="Chapainawabganj">Chapainawabganj / চাঁপাইনবাবগঞ্জ</option>
+                  <option value="Chattogram">Chattogram / চট্টগ্রাম</option>
+                  <option value="Chuadanga">Chuadanga / চুয়াডাঙ্গা</option>
+                  <option value="Cumilla">Cumilla / কুমিল্লা</option>
+                  <option value="Cox&#x27;s Bazar">Cox&#x27;s Bazar / কক্সবাজার</option>
+                  <option value="Dhaka">Dhaka / ঢাকা</option>
+                  <option value="Dinajpur">Dinajpur / দিনাজপুর</option>
+                  <option value="Faridpur">Faridpur / ফরিদপুর</option>
+                  <option value="Feni">Feni / ফেনী</option>
+                  <option value="Gaibandha">Gaibandha / গাইবান্ধা</option>
+                  <option value="Gazipur">Gazipur / গাজীপুর</option>
+                  <option value="Gopalganj">Gopalganj / গোপালগঞ্জ</option>
+                  <option value="Habiganj">Habiganj / হবিগঞ্জ</option>
+                  <option value="Jamalpur">Jamalpur / জামালপুর</option>
+                  <option value="Jashore">Jashore / যশোর</option>
+                  <option value="Jhalakathi">Jhalakathi / ঝালকাঠি</option>
+                  <option value="Jhenaidah">Jhenaidah / ঝিনাইদহ</option>
+                  <option value="Joypurhat">Joypurhat / জয়পুরহাট</option>
+                  <option value="Khagrachhari">Khagrachhari / খাগড়াছড়ি</option>
+                  <option value="Khulna">Khulna / খুলনা</option>
+                  <option value="Kishoreganj">Kishoreganj / কিশোরগঞ্জ</option>
+                  <option value="Kurigram">Kurigram / কুড়িগ্রাম</option>
+                  <option value="Kushtia">Kushtia / কুষ্টিয়া</option>
+                  <option value="Lakshmipur">Lakshmipur / লক্ষ্মীপুর</option>
+                  <option value="Lalmonirhat">Lalmonirhat / লালমনিরহাট</option>
+                  <option value="Madaripur">Madaripur / মাদারীপুর</option>
+                  <option value="Magura">Magura / মাগুরা</option>
+                  <option value="Manikganj">Manikganj / মানিকগঞ্জ</option>
+                  <option value="Meherpur">Meherpur / মেহেরপুর</option>
+                  <option value="Moulvibazar">Moulvibazar / মৌলভীবাজার</option>
+                  <option value="Munshiganj">Munshiganj / মুন্সিগঞ্জ</option>
+                  <option value="Mymensingh">Mymensingh / ময়মনসিংহ</option>
+                  <option value="Naogaon">Naogaon / নওগাঁ</option>
+                  <option value="Narail">Narail / নড়াইল</option>
+                  <option value="Narayanganj">Narayanganj / নারায়ণগঞ্জ</option>
+                  <option value="Narsingdi">Narsingdi / নরসিংদী</option>
+                  <option value="Natore">Natore / নাটোর</option>
+                  <option value="Netrokona">Netrokona / নেত্রকোণা</option>
+                  <option value="Nilphamari">Nilphamari / নীলফামারী</option>
+                  <option value="Noakhali">Noakhali / নোয়াখালী</option>
+                  <option value="Pabna">Pabna / পাবনা</option>
+                  <option value="Panchagarh">Panchagarh / পঞ্চগড়</option>
+                  <option value="Patuakhali">Patuakhali / পটুয়াখালী</option>
+                  <option value="Pirojpur">Pirojpur / পিরোজপুর</option>
+                  <option value="Rajbari">Rajbari / রাজবাড়ী</option>
+                  <option value="Rajshahi">Rajshahi / রাজশাহী</option>
+                  <option value="Rangamati">Rangamati / রাঙ্গামাটি</option>
+                  <option value="Rangpur">Rangpur / রংপুর</option>
+                  <option value="Satkhira">Satkhira / সাতক্ষীরা</option>
+                  <option value="Shariatpur">Shariatpur / শরীয়তপুর</option>
+                  <option value="Sherpur">Sherpur / শেরপুর</option>
+                  <option value="Sirajganj">Sirajganj / সিরাজগঞ্জ</option>
+                  <option value="Sunamganj">Sunamganj / সুনামগঞ্জ</option>
+                  <option value="Sylhet">Sylhet / সিলেট</option>
+                  <option value="Tangail">Tangail / টাঙ্গাইল</option>
+                  <option value="Thakurgaon">Thakurgaon / ঠাকুরগাঁও</option>
+                  </select>
+                </label>
+
+                <label class="order-field order-field-full">
+                  <span>FULL ADDRESS <b>*</b></span>
+                  <textarea
+                    name="address"
+                    rows="3"
+                    placeholder="HOUSE NO, ROAD, AREA, CITY..."
+                    required
+                  ></textarea>
+                </label>
+
+                <div class="order-field order-field-full">
+                  <span>DELIVERY LOCATION <b>*</b></span>
+
+                  <div class="order-delivery-options">
+                    <label class="order-delivery-card is-active">
+                      <input
+                        type="radio"
+                        name="delivery"
+                        value="inside_dhaka"
+                        data-delivery-charge="80"
+                        checked
+                      />
+                      <span>
+                        <strong>INSIDE DHAKA</strong>
+                        <small>৳ 80 / 24–48 HRS</small>
+                      </span>
+                    </label>
+
+                    <label class="order-delivery-card">
+                      <input
+                        type="radio"
+                        name="delivery"
+                        value="outside_dhaka"
+                        data-delivery-charge="150"
+                      />
+                      <span>
+                        <strong>OUTSIDE DHAKA</strong>
+                        <small>৳ 150 / 3–5 DAYS</small>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+
+                <label class="order-field order-field-full">
+                  <span>ORDER NOTE / OPTIONAL</span>
+                  <textarea
+                    name="note"
+                    rows="2"
+                    placeholder="SPECIAL SIZE, DELIVERY OR PACKAGING INSTRUCTIONS..."
+                  ></textarea>
+                </label>
+              </div>
+
+              <div class="order-contact-note">
+                <span>CALLBACK PROTOCOL</span>
+                <p>We will contact you after submission. Please keep your phone available.</p>
+              </div>
+            </section>
+
+            <section class="order-panel order-cart-panel" aria-labelledby="cart-summary-title">
+              <div class="order-panel-heading">
+                <div>
+                  <p class="order-panel-index">02 / ACTIVE LOADOUT</p>
+                  <h3 id="cart-summary-title">YOUR CART</h3>
+                </div>
+
+                <span class="order-cart-count" data-cart-count>02 ITEMS</span>
+              </div>
+
+              <div class="order-cart-list" data-cart-list>
+                <article class="order-cart-item" data-cart-item data-unit-price="4950">
+                  <img
+                    src="./assets/products/real/product-04-glacier-white-black.webp"
+                    alt="Summit 900 winter jacket in white and black"
+                  />
+
+                  <div class="order-cart-item-copy">
+                    <p>THE NORTH FACE / SUMMIT SERIES</p>
+                    <h4>SUMMIT 900 JACKET</h4>
+                    <span>WHITE-BLACK / SIZE M</span>
+                  </div>
+
+                  <div class="order-quantity-control" aria-label="Quantity controls for Summit 900 jacket">
+                    <button type="button" data-cart-action="decrease" aria-label="Decrease quantity">−</button>
+                    <strong data-cart-quantity>1</strong>
+                    <button type="button" data-cart-action="increase" aria-label="Increase quantity">+</button>
+                  </div>
+
+                  <strong class="order-cart-item-price" data-cart-item-total>৳ 4,950</strong>
+
+                  <button class="order-cart-remove" type="button" data-cart-action="remove" aria-label="Remove Summit 900 jacket">×</button>
+                </article>
+
+                <article class="order-cart-item" data-cart-item data-unit-price="3850">
+                  <img
+                    src="./assets/products/real/product-05-polar-sky-petrol.webp"
+                    alt="Nike premium contrast padded jacket in sky and petrol"
+                  />
+
+                  <div class="order-cart-item-copy">
+                    <p>NIKE / CONTRAST PADDED</p>
+                    <h4>POLAR TECH PUFFER</h4>
+                    <span>SKY-PETROL / SIZE L</span>
+                  </div>
+
+                  <div class="order-quantity-control" aria-label="Quantity controls for Polar Tech puffer">
+                    <button type="button" data-cart-action="decrease" aria-label="Decrease quantity">−</button>
+                    <strong data-cart-quantity>1</strong>
+                    <button type="button" data-cart-action="increase" aria-label="Increase quantity">+</button>
+                  </div>
+
+                  <strong class="order-cart-item-price" data-cart-item-total>৳ 3,850</strong>
+
+                  <button class="order-cart-remove" type="button" data-cart-action="remove" aria-label="Remove Polar Tech puffer">×</button>
+                </article>
+              </div>
+
+              <div class="order-cart-empty" data-cart-empty hidden>
+                <p>NO FIELD GEAR SELECTED.</p>
+                <a href="#grid">RETURN TO COLLECTION</a>
+              </div>
+
+              <div class="order-promo-wrap">
+                <label class="order-field">
+                  <span>PROMO ACCESS CODE</span>
+
+                  <span class="order-promo-input-wrap">
+                    <input type="text" name="promo" data-promo-input placeholder="ENTER CODE" />
+                    <button type="button" data-promo-apply>APPLY</button>
+                  </span>
+                </label>
+
+                <p class="order-promo-status" data-promo-status aria-live="polite"></p>
+              </div>
+
+              <div class="order-summary">
+                <div>
+                  <span>SUBTOTAL</span>
+                  <strong data-order-subtotal>৳ 8,800</strong>
+                </div>
+
+                <div>
+                  <span>VAT / TAX</span>
+                  <strong>৳ 0</strong>
+                </div>
+
+                <div>
+                  <span>DELIVERY CHARGE</span>
+                  <strong data-order-delivery>৳ 80</strong>
+                </div>
+
+                <div class="order-summary-discount" data-order-discount-row hidden>
+                  <span>PROMO DISCOUNT</span>
+                  <strong data-order-discount>− ৳ 0</strong>
+                </div>
+
+                <div class="order-summary-total">
+                  <span>GRAND TOTAL</span>
+                  <strong data-order-total>৳ 8,880</strong>
+                </div>
+              </div>
+
+              <button class="order-confirm-btn" type="submit">
+                <span>CONFIRM ORDER</span>
+                <strong data-order-submit-total>৳ 8,880</strong>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h13" />
+                  <path d="m13 7 5 5-5 5" />
+                </svg>
+              </button>
+
+              <button class="order-invoice-btn" type="button" data-invoice-open>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M14 3h5v5" />
+                  <path d="M10 14 19 5" />
+                  <path d="M19 13v6H5V5h6" />
+                </svg>
+                <span>PREVIEW INVOICE</span>
+              </button>
+
+              <div class="order-trust-row" aria-label="Order assurances">
+                <span>SECURE FORM</span>
+                <span>COD AVAILABLE</span>
+                <span>EASY RETURN</span>
+              </div>
+
+              <p class="order-form-status" data-order-status aria-live="polite"></p>
+            </section>
+          </form>
+        </div>
+
+        <div class="order-invoice-modal" data-invoice-modal aria-hidden="true">
+          <div class="order-invoice-backdrop" data-invoice-close></div>
+
+          <section class="order-invoice-dialog" role="dialog" aria-modal="true" aria-labelledby="invoice-title">
+            <button class="order-invoice-close" type="button" data-invoice-close aria-label="Close invoice preview">×</button>
+
+            <div class="order-invoice-topline">
+              <p>FRZN / PROFORMA INVOICE</p>
+              <span>PREVIEW ONLY</span>
+            </div>
+
+            <h3 id="invoice-title">FIELD GEAR <span>INVOICE.</span></h3>
+
+            <div class="order-invoice-customer" data-invoice-customer>
+              CUSTOMER DATA WILL APPEAR AFTER YOU COMPLETE THE FORM.
+            </div>
+
+            <div class="order-invoice-items" data-invoice-items></div>
+
+            <div class="order-invoice-total">
+              <span>GRAND TOTAL</span>
+              <strong data-invoice-total>৳ 8,880</strong>
+            </div>
+
+            <p class="order-invoice-note">
+              This is a front-end preview. Final confirmation will be completed by phone.
+            </p>
+          </section>
+        </div>
+      </section>
+
+      <!-- ========================================
+           SECTION 07: FOOTER
+      ========================================= -->
+      <footer class="footer-section" id="footer">
+        <div class="footer-topline" aria-hidden="true">
+          <span>FRZN / ARCTIC DIVISION</span>
+          <i></i>
+          <span>EST. 2026</span>
+        </div>
+
+        <div class="footer-main">
+          <section class="footer-brand" aria-label="FRZN brand summary">
+            <a class="footer-logo" href="#top" aria-label="FRZN home">
+              <span class="footer-logo-mark" aria-hidden="true">
+                <svg viewBox="0 0 42 42">
+                  <path d="M21 2 37.45 11.5v19L21 40 4.55 30.5v-19L21 2Z" />
+                  <path d="m21 8 11.25 6.5v13L21 34 9.75 27.5v-13L21 8Z" />
+                  <path d="M13.5 18.25 21 14l7.5 4.25v8.5L21 31l-7.5-4.25v-8.5Z" />
+                </svg>
+              </span>
+
+              <span class="footer-logo-copy">
+                <strong>FRZN</strong>
+                <small>ARCTIC DIVISION</small>
+              </span>
+            </a>
+
+            <p class="footer-brand-description">
+              Technical winter wear engineered for elevated terrain,
+              sub-zero streets and uncompromising movement.
+            </p>
+
+            <div class="footer-coordinates" aria-label="Brand coordinates">
+              <span>27.9881° N</span>
+              <i></i>
+              <span>86.9250° E</span>
+            </div>
+          </section>
+
+          <nav class="footer-links" aria-label="Footer navigation">
+            <div class="footer-link-group">
+              <p>SHOP</p>
+              <a href="#collection">New collection</a>
+              <a href="#grid">Puffer jackets</a>
+              <a href="#grid">Technical shells</a>
+              <a href="#grid">Accessories</a>
+            </div>
+
+            <div class="footer-link-group">
+              <p>EXPLORE</p>
+              <a href="#editorial">Field journal</a>
+              <a href="#editorial">Altitude protocol</a>
+              <a href="#editorial">Material system</a>
+              <a href="#top">Campaign archive</a>
+            </div>
+
+            <div class="footer-link-group">
+              <p>SUPPORT</p>
+              <a href="#footer">Delivery</a>
+              <a href="#footer">Returns</a>
+              <a href="#footer">Size guide</a>
+              <a href="#footer">Contact</a>
+            </div>
+          </nav>
+
+          <section class="footer-newsletter" aria-labelledby="footer-newsletter-title">
+            <p class="footer-newsletter-kicker">FIELD TRANSMISSION / 001</p>
+
+            <h2 id="footer-newsletter-title">
+              RECEIVE THE NEXT
+              <span>COLD DROP.</span>
+            </h2>
+
+            <p class="footer-newsletter-description">
+              Limited releases, field notes and technical collection updates.
+            </p>
+
+            <form class="footer-newsletter-form" data-footer-newsletter novalidate>
+              <label class="sr-only" for="footer-email">Email address</label>
+
+              <div class="footer-newsletter-input-wrap">
+                <input
+                  id="footer-email"
+                  type="email"
+                  name="email"
+                  autocomplete="email"
+                  placeholder="EMAIL ADDRESS"
+                  required
+                />
+
+                <button type="submit" aria-label="Subscribe to FRZN newsletter">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 12h13" />
+                    <path d="m13 7 5 5-5 5" />
+                  </svg>
+                </button>
+              </div>
+
+              <p class="footer-newsletter-status" data-footer-newsletter-status aria-live="polite"></p>
+            </form>
+          </section>
+        </div>
+
+        <div class="footer-bottom">
+          <p>©2026 FRZN WEAR. ALL RIGHTS RESERVED.</p>
+
+          <div class="footer-legal">
+            <a href="#footer">PRIVACY</a>
+            <a href="#footer">TERMS</a>
+            <a href="#footer">COOKIES</a>
+          </div>
+
+          <div class="footer-socials" aria-label="Social links">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Pinterest">PT</a>
+            <a href="#" aria-label="X">X</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
+    <script src="./js/main.js" defer></script>
+    <script src="./js/hero-slider.js" defer></script>
+    <script src="./js/editorial-parallax.js" defer></script>
+    <script src="./js/order-form.js" defer></script>
+    <script src="./js/footer-newsletter.js" defer></script>
+  </body>
+</html>

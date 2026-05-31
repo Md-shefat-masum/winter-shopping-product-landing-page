@@ -1,0 +1,87 @@
+/* =========================================================
+   Slider controls shared by the hero campaign
+   ========================================================= */
+.hero-nav-row {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr) 36px;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-nav-btn {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid rgba(218, 229, 238, 0.28);
+  color: rgba(247, 250, 252, 0.78);
+  background: rgba(218, 229, 238, 0.04);
+  cursor: pointer;
+  transition:
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.hero-nav-btn:hover,
+.hero-nav-btn:focus-visible {
+  border-color: rgba(247, 250, 252, 0.72);
+  color: var(--text-primary);
+  background: rgba(218, 229, 238, 0.11);
+  transform: translateY(-2px);
+}
+
+.hero-nav-btn svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.35;
+}
+
+.hero-pagination {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  color: rgba(247, 250, 252, 0.82);
+  font-family: var(--font-tech);
+  font-size: 0.48rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.hero-pagination::before {
+  content: "";
+  display: block;
+  flex: 1;
+  height: 1px;
+  background: rgba(218, 229, 238, 0.25);
+}
+
+.hero-pagination-current,
+.hero-pagination-total {
+  white-space: nowrap;
+}
+
+.hero-pagination-current {
+  order: -1;
+}
+
+.hero-pagination-total {
+  color: rgba(218, 229, 238, 0.48);
+}
+
+@media (max-width: 760px) {
+  .hero-nav-row {
+    grid-template-columns: 34px minmax(0, 1fr) 34px;
+  }
+
+  .hero-nav-btn {
+    width: 34px;
+    height: 34px;
+  }
+}

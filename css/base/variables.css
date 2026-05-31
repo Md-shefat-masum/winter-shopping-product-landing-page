@@ -1,0 +1,47 @@
+:root {
+  /* =======================================================
+     Colour system
+     ======================================================= */
+  --page-bg: #647b8d;
+  --site-bg: #4e6a7e;
+  --section-bg: #3f5b6f;
+  --hero-bg: #2d4b5f;
+  --deep-bg: #1b3142;
+
+  --card-bg: #b0c8d9;
+  --card-bg-muted: #9ab2c4;
+
+  --text-primary: #f7fafc;
+  --text-soft: #dae5ee;
+  --text-muted: #869fb2;
+  --text-dark: #203746;
+
+  --border-soft: rgba(218, 229, 238, 0.35);
+  --border-faint: rgba(218, 229, 238, 0.16);
+  --overlay-dark: rgba(27, 49, 66, 0.44);
+  --overlay-light: rgba(176, 200, 217, 0.18);
+
+  /* =======================================================
+     Layout
+     ======================================================= */
+  --site-max-width: 1440px;
+  --site-gutter: clamp(14px, 3vw, 44px);
+  --section-space-x: clamp(20px, 4vw, 60px);
+  --section-space-y: clamp(52px, 7vw, 104px);
+
+  /* =======================================================
+     Typography
+     ======================================================= */
+  --font-display: "Anton", "Arial Narrow", Impact, sans-serif;
+  --font-body: "Inter", Arial, sans-serif;
+  --font-tech: "Space Mono", "Courier New", monospace;
+
+  /* =======================================================
+     Shape and motion
+     ======================================================= */
+  --clip-corner-size: 18px;
+  --radius-sm: 4px;
+  --radius-pill: 999px;
+  --transition-fast: 180ms ease;
+  --transition-normal: 320ms ease;
+}

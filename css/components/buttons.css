@@ -1,0 +1,44 @@
+/* =========================================================
+   Shared buttons
+   ========================================================= */
+.octagon-btn {
+  display: grid;
+  width: 68px;
+  height: 68px;
+  place-items: center;
+  border: 1px solid rgba(247, 250, 252, 0.72);
+  color: var(--deep-bg);
+  background: rgba(247, 250, 252, 0.92);
+  cursor: pointer;
+  clip-path: polygon(
+    24% 0,
+    76% 0,
+    100% 24%,
+    100% 76%,
+    76% 100%,
+    24% 100%,
+    0 76%,
+    0 24%
+  );
+  transition:
+    background-color var(--transition-normal),
+    color var(--transition-normal),
+    transform var(--transition-normal);
+}
+
+.octagon-btn:hover,
+.octagon-btn:focus-visible {
+  color: var(--text-primary);
+  background: var(--deep-bg);
+  transform: translateY(-4px) rotate(-4deg);
+}
+
+.octagon-btn svg {
+  width: 25px;
+  height: 25px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.25;
+}

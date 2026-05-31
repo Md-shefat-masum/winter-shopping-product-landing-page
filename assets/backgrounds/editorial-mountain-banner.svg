@@ -1,0 +1,47 @@
+<svg width="1800" height="980" viewBox="0 0 1800 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="900" y1="0" x2="900" y2="980" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#496D82"/>
+      <stop offset=".44" stop-color="#6F8FA1"/>
+      <stop offset="1" stop-color="#264B60"/>
+    </linearGradient>
+    <linearGradient id="ridgeBack" x1="860" y1="222" x2="860" y2="830" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DCE8EC"/>
+      <stop offset=".54" stop-color="#8FA8B4"/>
+      <stop offset="1" stop-color="#4D7285"/>
+    </linearGradient>
+    <linearGradient id="ridgeFront" x1="970" y1="380" x2="970" y2="980" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#BED1D8"/>
+      <stop offset=".52" stop-color="#6D8F9F"/>
+      <stop offset="1" stop-color="#31576B"/>
+    </linearGradient>
+    <radialGradient id="mist" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(912 344) rotate(90) scale(470 930)">
+      <stop stop-color="#F0F6F7" stop-opacity=".48"/>
+      <stop offset="1" stop-color="#DCEAEC" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur" x="-100" y="-100" width="2000" height="1180" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="32"/>
+    </filter>
+  </defs>
+
+  <rect width="1800" height="980" fill="url(#sky)"/>
+  <ellipse cx="900" cy="302" rx="920" ry="520" fill="url(#mist)"/>
+
+  <!-- distant mountains -->
+  <path d="M-120 782 214 546l126 78 238-318 160 204 254-392 224 342 188-246 286 370 214-152 116 164v384H-120V782Z" fill="url(#ridgeBack)" opacity=".9"/>
+  <path d="m578 306 160 204-168 188-208-90 216-302Z" fill="#EFF5F6" fill-opacity=".42"/>
+  <path d="m992 118 224 342-136 170-198-198 110-314Z" fill="#F5F9FA" fill-opacity=".5"/>
+  <path d="m1404 214 286 370-238 18-160-184 112-204Z" fill="#E7F0F2" fill-opacity=".34"/>
+
+  <!-- mist -->
+  <path d="M-160 638c408-112 702 18 1042-42 342-60 616-48 1078 74v198H-160V638Z" fill="#E1ECEF" fill-opacity=".2" filter="url(#blur)"/>
+
+  <!-- foreground ridge -->
+  <path d="M-180 980V820l358-190 194 106 218-162 212 104 238-236 244 210 224-118 472 198v248H-180Z" fill="url(#ridgeFront)"/>
+  <path d="m1040 442 244 210-158 170-218-120 132-260Z" fill="#D7E4E8" fill-opacity=".34"/>
+  <path d="m590 574 212 104-130 174-252-100 170-178Z" fill="#DCE8EB" fill-opacity=".22"/>
+  <path d="m1508 534 472 198v248h-414l-148-274 90-172Z" fill="#B7CDD6" fill-opacity=".2"/>
+
+  <!-- ridge line detail -->
+  <path d="M-20 846 188 660l184 88 226-156 210 116 236-236 244 208 222-120 332 144" stroke="#EAF2F4" stroke-opacity=".36" stroke-width="4"/>
+</svg>

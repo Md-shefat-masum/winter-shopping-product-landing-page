@@ -1,0 +1,178 @@
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--page-bg);
+}
+
+/* =========================================================
+   STEP 02 — Full-page alpine atmosphere
+   The decorative backdrop sits outside the central storefront.
+   ========================================================= */
+.page-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(63, 86, 104, 0.38) 0%,
+      rgba(79, 105, 123, 0.58) 46%,
+      rgba(40, 63, 78, 0.76) 100%
+    ),
+    url("../../assets/backgrounds/page-alpine-bg.svg") center / cover no-repeat;
+}
+
+.page-backdrop::before,
+.page-backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.page-backdrop::before {
+  background:
+    radial-gradient(
+      circle at 50% -4%,
+      rgba(222, 236, 244, 0.46),
+      transparent 42%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(20, 43, 58, 0.18),
+      transparent 28%,
+      transparent 72%,
+      rgba(20, 43, 58, 0.18)
+    );
+}
+
+.page-backdrop::after {
+  opacity: 0.25;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(239, 247, 250, 0.06) 0,
+      rgba(239, 247, 250, 0.06) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+  mix-blend-mode: screen;
+}
+
+/* =========================================================
+   Central storefront shell
+   ========================================================= */
+.site-shell {
+  position: relative;
+  isolation: isolate;
+  width: min(calc(100% - (var(--site-gutter) * 2)), var(--site-max-width));
+  min-height: 100vh;
+  margin-inline: auto;
+  overflow: hidden;
+  border-inline: 1px solid rgba(218, 229, 238, 0.16);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(48, 78, 96, 0.97),
+      rgba(61, 88, 105, 0.98)
+    );
+  box-shadow:
+    0 0 0 1px rgba(20, 45, 59, 0.16),
+    0 24px 80px rgba(13, 33, 45, 0.30);
+}
+
+.site-shell::before,
+.site-shell::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.site-shell::before {
+  inset: 0;
+  opacity: 0.46;
+  background:
+    linear-gradient(
+      115deg,
+      rgba(214, 232, 241, 0.12),
+      transparent 24%,
+      transparent 68%,
+      rgba(20, 50, 66, 0.14)
+    );
+}
+
+.site-shell::after {
+  top: 0;
+  left: 50%;
+  width: min(86%, 1080px);
+  height: 420px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  opacity: 0.46;
+  background: rgba(189, 214, 226, 0.18);
+  filter: blur(120px);
+}
+
+.section-placeholder {
+  position: relative;
+  display: grid;
+  min-height: 220px;
+  place-content: center;
+  gap: 12px;
+  padding: var(--section-space-y) var(--section-space-x);
+  border-bottom: 1px solid var(--border-faint);
+  text-align: center;
+}
+
+.section-placeholder::after {
+  content: "";
+  position: absolute;
+  right: var(--section-space-x);
+  bottom: 18px;
+  left: var(--section-space-x);
+  height: 1px;
+  opacity: 0.42;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(218, 229, 238, 0.38) 14%,
+      rgba(218, 229, 238, 0.12) 84%,
+      transparent
+    );
+}
+
+/* Laptop and smaller desktop */
+@media (max-width: 1200px) {
+  .site-shell {
+    width: min(calc(100% - 28px), var(--site-max-width));
+  }
+}
+
+/* Mobile storefront becomes edge-to-edge */
+@media (max-width: 640px) {
+  .site-shell {
+    width: 100%;
+    border-inline: 0;
+  }
+
+  .page-backdrop::after {
+    opacity: 0.14;
+  }
+}
+
+
+/* Accessible visual hiding utility */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}

@@ -1,0 +1,74 @@
+<svg width="1920" height="2400" viewBox="0 0 1920 2400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="960" y1="0" x2="960" y2="2400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A7BBC8"/>
+      <stop offset="0.42" stop-color="#7892A4"/>
+      <stop offset="1" stop-color="#3C5A6E"/>
+    </linearGradient>
+    <linearGradient id="mountainBack" x1="930" y1="460" x2="930" y2="1650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8E4E9" stop-opacity="0.88"/>
+      <stop offset="1" stop-color="#698396" stop-opacity="0.96"/>
+    </linearGradient>
+    <linearGradient id="mountainMid" x1="1150" y1="680" x2="1150" y2="1880" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B6CBD5"/>
+      <stop offset="1" stop-color="#537185"/>
+    </linearGradient>
+    <linearGradient id="mountainFront" x1="900" y1="980" x2="900" y2="2400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#91AABB"/>
+      <stop offset="1" stop-color="#365467"/>
+    </linearGradient>
+    <radialGradient id="mist" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(960 760) rotate(90) scale(980 1300)">
+      <stop stop-color="#EAF3F6" stop-opacity="0.46"/>
+      <stop offset="1" stop-color="#EAF3F6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur36" x="-100" y="-100" width="2120" height="2600" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="36"/>
+    </filter>
+    <filter id="blur70" x="-200" y="-200" width="2320" height="2800" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="70"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="2400" fill="url(#sky)"/>
+  <ellipse cx="960" cy="680" rx="1080" ry="830" fill="url(#mist)"/>
+
+  <!-- distant ridges -->
+  <path d="M-120 1570L132 1278L300 1384L544 918L676 1084L900 622L1040 842L1178 548L1396 936L1556 742L2040 1346V1750H-120V1570Z" fill="url(#mountainBack)" opacity="0.88"/>
+  <path d="M-90 1742L172 1500L350 1584L594 1202L782 1426L1018 980L1214 1278L1438 1046L1648 1360L1996 1144L2040 1850H-90V1742Z" fill="url(#mountainMid)" opacity="0.84"/>
+
+  <!-- snow facets -->
+  <path d="M544 918L676 1084L594 1202L350 1584L468 1234L544 918Z" fill="#E4EDF0" fill-opacity="0.38"/>
+  <path d="M900 622L1040 842L1018 980L782 1426L846 948L900 622Z" fill="#EDF4F5" fill-opacity="0.40"/>
+  <path d="M1178 548L1396 936L1214 1278L1120 948L1178 548Z" fill="#EEF5F6" fill-opacity="0.46"/>
+  <path d="M1556 742L2040 1346L1648 1360L1472 1108L1556 742Z" fill="#DDE9ED" fill-opacity="0.35"/>
+
+  <!-- atmospheric mist -->
+  <path d="M-120 1426C264 1326 548 1446 890 1370C1240 1292 1518 1308 2040 1424V1758H-120V1426Z" fill="#D9E6EB" fill-opacity="0.17" filter="url(#blur36)"/>
+  <path d="M-140 1692C310 1594 546 1718 900 1662C1250 1606 1582 1602 2060 1746V1990H-140V1692Z" fill="#DAE8EC" fill-opacity="0.20" filter="url(#blur70)"/>
+
+  <!-- foreground ridge -->
+  <path d="M-100 1994L246 1710L492 1848L786 1426L988 1708L1240 1384L1506 1646L1774 1492L2040 1712V2400H-100V1994Z" fill="url(#mountainFront)" opacity="0.92"/>
+  <path d="M786 1426L988 1708L842 1908L492 1848L786 1426Z" fill="#ADC1CC" fill-opacity="0.28"/>
+  <path d="M1240 1384L1506 1646L1326 1880L1058 1680L1240 1384Z" fill="#C6D5DC" fill-opacity="0.22"/>
+  <path d="M1774 1492L2040 1712V2400H1664L1568 1810L1774 1492Z" fill="#B7CBD4" fill-opacity="0.20"/>
+
+  <!-- subtle snow grain -->
+  <g opacity="0.22" fill="#EEF5F6">
+    <circle cx="182" cy="470" r="3"/>
+    <circle cx="380" cy="620" r="2"/>
+    <circle cx="690" cy="392" r="3"/>
+    <circle cx="1020" cy="508" r="2"/>
+    <circle cx="1318" cy="326" r="3"/>
+    <circle cx="1648" cy="568" r="2"/>
+    <circle cx="1782" cy="918" r="3"/>
+    <circle cx="226" cy="1024" r="2"/>
+    <circle cx="506" cy="1160" r="3"/>
+    <circle cx="1032" cy="1090" r="2"/>
+    <circle cx="1440" cy="1268" r="3"/>
+    <circle cx="1730" cy="1364" r="2"/>
+    <circle cx="352" cy="1576" r="3"/>
+    <circle cx="820" cy="1510" r="2"/>
+    <circle cx="1172" cy="1814" r="3"/>
+    <circle cx="1554" cy="1988" r="2"/>
+  </g>
+</svg>

@@ -1,0 +1,26 @@
+/* =========================================================
+   FRZN Alpine Fashion UI
+   CSS entry point — imports only
+   ========================================================= */
+
+/* Base */
+@import url("./base/variables.css");
+@import url("./base/reset.css");
+@import url("./base/typography.css");
+@import url("./base/global.css");
+
+/* Shared Components */
+@import url("./components/buttons.css");
+@import url("./components/clip-shapes.css");
+@import url("./components/tech-labels.css");
+@import url("./components/product-card.css");
+@import url("./components/icons.css");
+
+/* Homepage Sections */
+@import url("./sections/navbar.css");
+@import url("./sections/hero.css");
+@import url("./sections/collection-header.css");
+@import url("./sections/collection-grid.css");
+@import url("./sections/editorial-banner.css");
+@import url("./sections/order-form.css");
+@import url("./sections/footer.css");
